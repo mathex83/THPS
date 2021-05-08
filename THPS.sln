@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THPS", "THPS\THPS.csproj", "{9C1AFEB3-A2F5-40BA-8782-D5CA45DA1779}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C1AFEB3-A2F5-40BA-8782-D5CA45DA1779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1AFEB3-A2F5-40BA-8782-D5CA45DA1779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1AFEB3-A2F5-40BA-8782-D5CA45DA1779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1AFEB3-A2F5-40BA-8782-D5CA45DA1779}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC08F779-7FD9-4341-BD28-2B45BF1CBF12}
+	EndGlobalSection
+EndGlobal
