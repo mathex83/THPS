@@ -22,8 +22,9 @@
 				</Style>
 			</Style.Resources>
 		</Style>
-		<Style x:Key="StandardGrid">
-			<Style.Resources>
+		<Style x:Key="StandardGrid" TargetType="Grid">
+			<Setter Property="Grid.ShowGridLines" Value="True"/>
+			<Style.Resources>				
 				<Style TargetType="TextBlock">
 					<Setter Property="TextAlignment" Value="Left"/>
 					<Setter Property="VerticalAlignment" Value="Bottom"/>
@@ -37,6 +38,10 @@
 							</TransformGroup>
 						</Setter.Value>
 					</Setter>
+				</Style>
+				<Style TargetType="Canvas">
+					<Setter Property="Height" Value="20"/>
+					<Setter Property="Width" Value="20"/>
 				</Style>
 			</Style.Resources>
 		</Style>
