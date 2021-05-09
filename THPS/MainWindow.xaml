@@ -3,9 +3,40 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        Title="MainWindow" Style="{StaticResource StandardWindow}">
+        mc:Ignorable="d" Style="{StaticResource StandardWindow}" WindowStartupLocation="CenterScreen">
     <Grid>
-
-    </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+		<Menu x:Name="TopBar">
+			<MenuItem Header="Home"/>
+			<MenuItem Header="THPS 1+2: THPS 1 Maps">
+				<MenuItem Header="Progress"/>
+				<MenuItem Header="Warehouse"/>
+				<MenuItem Header="School"/>
+				<MenuItem Header="Mall"/>
+				<MenuItem Header="Skate Park (Competition)"/>
+				<MenuItem Header="Downtown"/>
+				<MenuItem Header="Downhill Jam"/>
+				<MenuItem Header="Burnside (Competition)"/>
+				<MenuItem Header="Streets"/>
+				<MenuItem Header="Roswell (Competition)"/>
+			</MenuItem>
+			<MenuItem Header="THPS 1+2: THPS 2 Maps">
+				<MenuItem Header="The Hangar"/>
+				<MenuItem Header="School II"/>
+				<MenuItem Header="Marseille (Competition)"/>
+				<MenuItem Header="NY City"/>
+				<MenuItem Header="Venice Beach"/>
+				<MenuItem Header="Skatestreet (Competition)"/>
+				<MenuItem Header="Philadelphia"/>
+				<MenuItem Header="The Bullring (Competition)"/>
+				<MenuItem Header="Chopper Drop"/>
+				<MenuItem Header="Skate Heaven"/>
+			</MenuItem>
+			<MenuItem Header="Quit" Click="Exit_Click"/>
+		</Menu>
+		<Frame x:Name="viewingWindow" NavigationUIVisibility="Hidden" Panel.ZIndex="1" Grid.Row="1"/>
+	</Grid>
 </Window>
