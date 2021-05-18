@@ -55,10 +55,10 @@ namespace THPS
 			{
 				MessageBox.Show($"Seems that the page you are trying to reach, could not be reached!\nError: {err.Message}");
 			}
-			if (header == "Progress")
-			{
-				progressPage.LoadAchievements(header);
-			}
+			//if (header == "Progress")
+			//{
+			//	progressPage.LoadAchievements(header);
+			//}
 		}
 
 		

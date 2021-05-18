@@ -6,6 +6,7 @@ using THPS.Models;
 using THPS.Models.Maps;
 using System;
 using System.Windows;
+using System.Windows.Data;
 
 namespace THPS.Pages
 {
@@ -17,6 +18,7 @@ namespace THPS.Pages
 		public ProgressPage()
 		{
 			InitializeComponent();
+			LoadAchievements();
 		}		
 
 		private void TBColorChange_click(object sender, MouseButtonEventArgs e)
@@ -29,7 +31,8 @@ namespace THPS.Pages
 			else
 				c.Background = Brushes.Transparent;
 		}
-		public void LoadAchievements(string header)
+
+		public void LoadAchievements()
 		{
 			List<TextBlock> textBlocks = new();
 			Warehouse warehouse = new();
@@ -43,7 +46,15 @@ namespace THPS.Pages
 
 			for (int i = 0; i < warehouse.Achievements.Count - 1; i++)
 			{
-				textBlocks[i].Text = warehouse.Achievements[i].Name.ToString();
+				string name = warehouse.Achievements[i].Name;
+				TextBlock tb = textBlocks[i];
+				tb.Text = name;
+				//Binding binding = new();
+				//binding.Source = warehouse.Achievements[i];
+				//binding.Path = new PropertyPath("name");
+				//binding.Mode = BindingMode.TwoWay;
+				//binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+				//BindingOperations.SetBinding(tb, TextBlock.TextProperty, binding);				
 			}
 
 			//MessageBox.Show(textBlocks[19].GetType().ToString());
