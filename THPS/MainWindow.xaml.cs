@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using THPS.Models;
 using THPS.Pages;
 
 namespace THPS
@@ -10,17 +11,18 @@ namespace THPS
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		static Home HomePage = new();
-		static Progress progressPage = new();
+		static HomePage homePage = new();
+		static ProgressPage progressPage = new();
 		private readonly Dictionary<string, Page> PageDirectory = new()
 		{
-			{ "Home", HomePage },
+			{ "Home", homePage },
 			{ "Progress", progressPage }
 		};
+		public List<GameMap> gameMaps;
 		public MainWindow()
 		{
 			InitializeComponent();
-			viewingWindow.Navigate(HomePage);
+			viewingWindow.Navigate(homePage);
 
 			foreach (MenuItem item in TopBar.Items)
 			{
@@ -43,16 +45,23 @@ namespace THPS
 			MenuItem item = e.Source as MenuItem;
 			// Change the Title of the window.
 			string header = item.Header.ToString();
+			ProgressPage progressPage = new();
 			this.Title = header;
 			try
 			{
-				viewingWindow.Navigate(PageDirectory[header]);
+				viewingWindow.Navigate(PageDirectory[header]);				
 			}
 			catch (System.Exception err)
 			{
 				MessageBox.Show($"Seems that the page you are trying to reach, could not be reached!\nError: {err.Message}");
 			}
+			//if (header == "Progress")
+			//{
+			//	progressPage.LoadAchievements(header);
+			//}
 		}
+
+		
 
 		private void Exit_Click(object sender, RoutedEventArgs e)
 		{
