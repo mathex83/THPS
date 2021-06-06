@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Models\Maps\img\" />
+    <Folder Include="SavedFiles\" />
   </ItemGroup>
 
 </Project>
