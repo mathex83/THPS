@@ -10,4 +10,28 @@ namespace THPS.Models
 		public string RWLocation { get; set; }
 		public List<Achievement> Achievements = new();
 	}
+
+	public class Achievement
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+
+		public Achievement(int id, string name)
+		{
+			Id = id;
+			Name = name;
+		}
+	}
+
+	public class Trophy
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+
+		public Trophy(int id, string name)
+		{
+			Id = id;
+			Name = name;
+		}
+	}
 }

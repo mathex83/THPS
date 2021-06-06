@@ -15,10 +15,11 @@ namespace THPS
 		static ProgressPage progressPage = new();
 		private readonly Dictionary<string, Page> PageDirectory = new()
 		{
-			{ "Home", homePage },
+			{ "Home", homePage  },
 			{ "Progress", progressPage }
 		};
 		public List<GameMap> gameMaps;
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -45,23 +46,16 @@ namespace THPS
 			MenuItem item = e.Source as MenuItem;
 			// Change the Title of the window.
 			string header = item.Header.ToString();
-			ProgressPage progressPage = new();
 			this.Title = header;
 			try
 			{
-				viewingWindow.Navigate(PageDirectory[header]);				
+				viewingWindow.Navigate(PageDirectory[header]);
 			}
 			catch (System.Exception err)
 			{
 				MessageBox.Show($"Seems that the page you are trying to reach, could not be reached!\nError: {err.Message}");
 			}
-			//if (header == "Progress")
-			//{
-			//	progressPage.LoadAchievements(header);
-			//}
 		}
-
-		
 
 		private void Exit_Click(object sender, RoutedEventArgs e)
 		{
