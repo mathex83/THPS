@@ -271,4 +271,15 @@
 			ImgUrl = "/TheRipper.jpg";
 		}
 	}
+
+	public class Created : Skater
+	{
+		public Created()
+		{
+			Id = 1224;
+			Name = "Mathex";
+			HomeTown = "PS4";
+			ImgUrl = "/mathexlogo.jpg";
+		}
+	}
 }
